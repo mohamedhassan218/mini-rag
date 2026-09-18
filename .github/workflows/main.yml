@@ -9,7 +9,7 @@ on:
 jobs:
   validate:
     uses: ./.github/workflows/validate.yml
-  # Temporarily disabled deployment to test the change. 
-  # deploy:
-  #   needs: validate
-  #   uses: ./.github/workflows/deploy-develop.yml
+
+  deploy:
+    needs: validate
+    uses: ./.github/workflows/deploy-develop.yml
